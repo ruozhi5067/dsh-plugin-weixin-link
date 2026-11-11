@@ -1,0 +1,56 @@
+{
+  "name": "dsh-wechat-clawbot",
+  "version": "0.4.1",
+  "description": "通过微信官方「龙虾」ClawBot 插件在手机上连接 DSH：DSH 界面内自带微信页面（侧边栏独立按钮打开），扫码登录、长轮询收消息、每条微信会话对应一个 DSH Agent 会话；微信里可显示深度思考与工具调用，并可批准单次操作、切换会话权限档位。Phone → WeChat ClawBot → DSH.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "wechat",
+    "weixin",
+    "clawbot",
+    "龙虾",
+    "openclaw",
+    "ilink",
+    "mobile"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "vendor",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "scripts": {
+    "test": "node tools/smoke-client.mjs && node tools/smoke-plugin.mjs && node tools/smoke-ilink.mjs"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruozhi5067/dsh-plugin-weixin-link.git"
+  },
+  "homepage": "https://github.com/ruozhi5067/dsh-plugin-weixin-link#readme",
+  "bugs": {
+    "url": "https://github.com/ruozhi5067/dsh-plugin-weixin-link/issues"
+  }
+}

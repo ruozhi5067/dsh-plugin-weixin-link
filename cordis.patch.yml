@@ -1,0 +1,19 @@
+# ============================================================================
+# dsh-wechat-clawbot —— DSH bundle patch
+# ============================================================================
+# 这是插件的「挂载声明」。DSH 启动时按 bundle 层栈叠加各插件 patch，
+# 本文件把插件作为一个 Loader entry 插入 profile 的配置树。
+#
+# 安装方式：
+#   dsh plugin --profile desktop add dsh-wechat-clawbot            # 从 npm
+#   dsh plugin --profile desktop add link:<本目录绝对路径>          # 本地开发
+#
+# 安装后打开 http://127.0.0.1:<端口>/wechat-clawbot 扫码登录。
+#
+# 注意：`name` 必须是**裸包名**。DSH 的 loader 不解析 exports 子路径
+# （实测 `dsh-wechat-clawbot/plugin.js` 会 import 失败）。
+# ============================================================================
+
+- insert:
+    - id: wechat-clawbot-dsh
+      name: dsh-wechat-clawbot
