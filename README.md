@@ -311,7 +311,7 @@ node tools/preflight-installed.mjs   # 用 DSH 的方式加载「已安装」的
 [`docs/wechat-ilink-protocol.md`](docs/wechat-ilink-protocol.md)；
 DSH 侧的插件与 Agent 接口整理稿见 [`docs/dsh-agent-api.md`](docs/dsh-agent-api.md)。
 
-内置二维码库：`qrcode-generator` 1.4.4（MIT，© 2009 Kazuhiko Arase），已随包放在 `vendor/qrcode.js`。
+内置二维码库：`qrcode-generator` 1.4.4（MIT，© 2009 Kazuhiko Arase），已随包放在 `vendor/qrcode.js`；第三方许可汇总见 [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md)。
 
 ## 目录结构
 
@@ -328,4 +328,4 @@ dsh-plugin-weixin-link/
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE)。第三方组件的许可见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
